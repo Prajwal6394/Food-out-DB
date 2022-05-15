@@ -1,18 +1,18 @@
 require("rootpath")();
-import express, { request } from "express";
+
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 const jwt = require("./src/_helpers/jwt");
 const errorHandler = require("./src/_helpers/error-handler");
 import config from './src/config.json'
-
+import express from "express";
 const app = express();
 const PORT = process.env.PORT || 4000;
 
 // mongoose connection
 const CONNECTION_URI = config.connectionString;
 mongoose.Promise = global.Promise;
-mongoose.connect(CONNECTION_URI || "mongodb://localhost/lineupX-client", {
+mongoose.connect(CONNECTION_URI || 'mongodb://localhost:27017/myapp', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
