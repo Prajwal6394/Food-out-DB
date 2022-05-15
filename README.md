@@ -2,7 +2,6 @@
 
 ## This API is live :
 
--[API base URL](https://foodshala-db.herokuapp.com/)
 
 ## Steps to run locally
 
